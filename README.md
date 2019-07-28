@@ -1,7 +1,8 @@
 # Game Theory
 # MixedNashAlgorithmPlotting
- fr : Une implémentation de l'algorithme de Nash mixte pour 3 joueurs avec 2 stratégies en Python.
- en : An implementation of the mixed Nash algorithm for 3 players with 2 strategies using Python language.
+fr : Une implémentation de l'algorithme de Nash mixte pour 3 joueurs avec 2 stratégies en Python.
+
+en : An implementation of the mixed Nash algorithm for 3 players with 2 strategies using Python language.
 
 How to Use
 ---
