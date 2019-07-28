@@ -40,32 +40,32 @@ def getU_game(game,exi=5000):
 	uo1 = [game[0][1][0][0]+game[0][1][1][0]+game[0][1][1][0]+game[0][0][1][0],0,game[0][0][0][0]+game[0][0][1][0]-game[0][1][0][0]-game[0][1][1][0], game[0][0][0][0]-game[0][0][1][0]+game[0][1][0][0]-game[0][1][1][0]]
 	uf1 = [game[1][1][0][0]+game[1][1][1][0]+game[1][1][1][0]+game[1][0][1][0],0,game[1][0][0][0]+game[1][0][1][0]-game[1][1][0][0]-game[1][1][1][0], game[1][0][0][0]-game[1][0][1][0]+game[1][1][0][0]-game[1][1][1][0]]
 
-	print "Les utilites des joueurs :"
-	print "U(j1,s1) =",print_eq(uo1)
-	print "U(j1,s2) =",print_eq(uf1)
+	print("Les utilites des joueurs :")
+	print("U(j1,s1) = "+str(print_eq(uo1)))
+	print("U(j1,s2) = "+str(print_eq(uf1)))
 
 
 	uo2 = [game[1][0][1][1]+game[0][0][1][1]+game[1][0][0][1]+game[1][0][1][1],  game[0][0][0][1]+game[0][0][1][1]-game[1][0][0][1]-game[1][0][1][1], 0 ,game[0][0][0][1]-game[0][0][1][1]+game[1][0][0][1]-game[1][0][1][1]]
 	uf2 = [game[1][1][1][1]+game[0][1][1][1]+game[1][1][0][1]+game[1][1][1][1],  game[0][1][0][1]+game[0][1][1][1]-game[1][1][0][1]-game[1][1][1][1], 0 ,game[0][1][0][1]-game[0][1][1][1]+game[1][1][0][1]-game[1][1][1][1]]
 
-	print "-"*40
-	print "U(j2,s1) =",print_eq(uo2)
-	print "U(j2,s2) =",print_eq(uf2)
+	print("-"*40)
+	print("U(j2,s1) = "+print_eq(uo2))
+	print("U(j2,s2) = "+print_eq(uf2))
 
 	uo3 = [game[1][0][0][2]+game[0][1][0][2]+game[1][1][0][2]+game[1][1][0][2],  game[0][1][0][2]+game[0][0][0][2]-game[1][0][0][2]-game[1][1][0][2],  game[0][0][0][2]-game[0][1][0][2]+game[1][0][0][2]-game[1][1][0][2] ,0]
 	uf3 = [game[1][0][1][2]+game[0][1][1][2]+game[1][1][1][2]+game[1][1][1][2],  game[0][1][1][2]+game[0][0][1][2]-game[1][0][1][2]-game[1][1][1][2],  game[0][0][1][2]-game[0][1][1][2]+game[1][0][1][2]-game[1][1][1][2] ,0]
 
-	print "-"*40
-	print "U(j3,s1) =",print_eq(uo3)
-	print "U(j3,s2) =",print_eq(uf3)
+	print("-"*40)
+	print("U(j3,s1) = "+print_eq(uo3))
+	print("U(j3,s2) = "+print_eq(uf3))
 
 	u_indif_1 = getDeriv(uo1,uf1)
 	u_indif_2 = getDeriv(uo2,uf2)
 	u_indif_3 = getDeriv(uo3,uf3)
-	print "-"*40
-	print "U1' =",print_eq(u_indif_1)
-	print "U2' =",print_eq(u_indif_2)
-	print "U3' =",print_eq(u_indif_3)
+	print("-"*40)
+	print("U1' = "+print_eq(u_indif_1))
+	print("U2' = "+print_eq(u_indif_2))
+	print("U3' = "+print_eq(u_indif_3))
 	
 	return u_indif_1, u_indif_2, u_indif_3
 
@@ -95,7 +95,7 @@ def wireframe(xyz1,xyz2,xyz3):
 	plt.xlabel('Joueur 2', fontsize=14)
 	plt.ylabel('Joueur 3', fontsize=14)
 
-	print "affiche joueur 1"
+	print("affiche joueur 1")
 	plt.show()
 
 	# second
@@ -107,7 +107,7 @@ def wireframe(xyz1,xyz2,xyz3):
 	plt.xlabel('Joueur 1', fontsize=14)
 	plt.ylabel('Joueur 3', fontsize=14)
 
-	print "affiche joueur 2"
+	print("affiche joueur 2")
 	plt.show()
 
 	# third
@@ -119,7 +119,7 @@ def wireframe(xyz1,xyz2,xyz3):
 	plt.xlabel('Joueur 1', fontsize=14)
 	plt.ylabel('Joueur 2', fontsize=14)
 
-	print "affiche joueur 3"
+	print("affiche joueur 3")
 	plt.show()
 
 
@@ -146,7 +146,7 @@ def surface(xyz1, xyz2, xyz3):
 	ax = fig.add_subplot(111, projection='3d')
 	surf = ax.plot_surface(x, y, z, rstride=1, cstride=1, cmap=cm.coolwarm, linewidth=0, antialiased=False)
 	fig.colorbar(surf, shrink=0.5, aspect=10)
-	print "affiche joueur 1"
+	print("affiche joueur 1")
 	plt.show()
 	# second
 	fig = plt.figure()
@@ -154,7 +154,7 @@ def surface(xyz1, xyz2, xyz3):
 	ax = fig.add_subplot(111, projection='3d')
 	surf = ax.plot_surface(x, y, z, rstride=1, cstride=1, cmap=cm.coolwarm, linewidth=0, antialiased=False)
 	fig.colorbar(surf, shrink=0.5, aspect=10)
-	print "affiche joueur 2"
+	print("affiche joueur 2")
 	plt.show()
 	# third
 	fig = plt.figure()
@@ -162,5 +162,8 @@ def surface(xyz1, xyz2, xyz3):
 	ax = fig.add_subplot(111, projection='3d')
 	surf = ax.plot_surface(x, y, z, rstride=1, cstride=1, cmap=cm.coolwarm, linewidth=0, antialiased=False)
 	fig.colorbar(surf, shrink=0.5, aspect=10)
-	print "affiche joueur 3"
+	print("affiche joueur 3")
 	plt.show()
+
+
+
