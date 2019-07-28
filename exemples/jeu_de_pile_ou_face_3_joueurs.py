@@ -2,7 +2,7 @@ from game3 import *
 
 
 if __name__ == '__main__':
-	print "Jeu de pile ou face avec un 3eme joueur "
+	print("Jeu de pile ou face avec un 3eme joueur ")
 	tab1C = [[(1,-1,2),(1,-1,6)],[(-1,1,1),(-1,1,1)]]
 	tab1F = [[(-1,1,1),(-1,1,5)],[(1,-1,5),(1,-1,1)]]
 	

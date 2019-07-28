@@ -3,7 +3,7 @@ from game3 import *
 
 
 if __name__ == '__main__':
-	print "Jeu de la guerre de sexe avec l'ajout du 3eme joueur (le fils des epoux)"
+	print("Jeu de la guerre de sexe avec l'ajout du 3eme joueur (le fils des epoux)")
 	tab1C = [[(2,1,2),(2,1,0)],[(0,0,1),(0,0,1)]]
 	tab1F = [[(0,0,1),(0,0,1)],[(1,2,0),(1,2,2)]]
 
